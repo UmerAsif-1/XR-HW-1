@@ -46,6 +46,8 @@ import androidx.room.*
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.compose.ui.platform.LocalContext
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.room.Room
 import com.example.composetutorial.data.User
 import com.example.composetutorial.data.UserDao
@@ -56,6 +58,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        setupActionBarWithNavController(findNavController(R.id.fragment))
     }
 
 }
